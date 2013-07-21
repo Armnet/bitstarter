@@ -3,8 +3,8 @@ var app = express.createServer(express.logger());
 var fs = require('fs');
 
 app.get('/', function(request, response) {
-    var indeks = fs.readFileSync("index.html");
-    response.send(indeks.toString("UTF-8");
+    var plik = fs.readFileSync("index.html");
+    response.send(plik.toString("UTF-8"));
 });
 
 var port = process.env.PORT || 5000;
